@@ -1,24 +1,19 @@
 // pages/about.tsx
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Header from '../components/layout/Header';
+import React from "react";
+import Button from "@/components/common/Button";
 
-const AboutPage: NextPage = () => {
+const AboutPage = () => {
   return (
-    <>
-      <Head>
-        <title>About | ALX Project</title>
-      </Head>
+    <div className="min-h-screen flex flex-col items-center justify-center gap-6 bg-gray-50">
+      <h1 className="text-3xl font-bold">About Page</h1>
+      <p className="text-gray-600">Below are examples of our reusable Button component:</p>
 
-      <Header title="ALX Project 0x02" />
-
-      <main className="max-w-5xl mx-auto px-4 py-12">
-        <h1 className="text-3xl font-bold mb-4">About Page</h1>
-        <p className="text-lg text-gray-700">
-          This page explains details about the ALX Project. It demonstrates routing in Next.js using the Pages Router.
-        </p>
-      </main>
-    </>
+      <div className="flex gap-4">
+        <Button label="Small Button" size="small" shape="rounded-sm" />
+        <Button label="Medium Button" size="medium" shape="rounded-md" />
+        <Button label="Large Button" size="large" shape="rounded-full" />
+      </div>
+    </div>
   );
 };
 
