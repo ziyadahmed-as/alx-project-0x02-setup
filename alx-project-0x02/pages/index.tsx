@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Starter Next.js app with TypeScript, ESLint and Tailwind CSS" />
       </Head>
 
-      <Header title="ALX Project 0x02" />
+    <Header />
 
       <main className="max-w-5xl mx-auto px-4 py-12">
         <h1 className="text-3xl font-bold mb-4">Welcome to ALX Project</h1>

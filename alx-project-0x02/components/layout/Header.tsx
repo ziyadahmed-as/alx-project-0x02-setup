@@ -1,35 +1,21 @@
 // components/layout/Header.tsx
-import React from 'react';
-import Link from 'next/link';
-import { HeaderProps } from '../../interfaces';
+import React from "react";
+import Link from "next/link";
 
-const Header: React.FC<HeaderProps> = ({ title = 'simple Project' }) => {
+const Header = () => {
   return (
-    <header className="bg-white border-b">
-      <div className="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-3">
-          <img
-            src="/assets/images/logo.png"
-            alt="ALX logo"
-            className="h-8 w-8 object-contain"
-          />
-          <span className="font-semibold text-lg">{title}</span>
+    <header className="bg-gray-800 text-white p-4">
+      <nav className="flex gap-6 justify-center">
+        <Link href="/home" className="hover:text-blue-400">
+          Home
         </Link>
-
-        <nav aria-label="Primary navigation">
-          <ul className="flex space-x-6">
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/home">/home</Link>
-            </li>
-            <li>
-              <Link href="/about">/about</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <Link href="/about" className="hover:text-blue-400">
+          About
+        </Link>
+        <Link href="/posts" className="hover:text-blue-400">
+          Posts
+        </Link>
+      </nav>
     </header>
   );
 };
