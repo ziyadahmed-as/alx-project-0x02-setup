@@ -24,3 +24,14 @@ export interface PostProps {
   content: string;
   userId: number;
 }
+
+// interfaces/index.ts
+export interface UserProps {
+  id: number;
+  name: string;
+  email: string;
+  address: {
+    street: string;
+    city: string;
+  };
+}
