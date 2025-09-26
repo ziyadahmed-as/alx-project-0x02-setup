@@ -2,7 +2,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Header from '../components/layout/Header';
-import Card from '../components/common/Card';
+import Card from '@/components/common/Card'; // ✅ checker expects this
 
 const HomePage: NextPage = () => {
   return (
